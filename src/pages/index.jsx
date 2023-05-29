@@ -1,3 +1,4 @@
+import getOpenCollectiveSponsors from '@/data/get-opencollective-sponsors';
 import {
   UsedIn,
   AvailableOnManyPlatforms,
@@ -12,8 +13,13 @@ import {
   Testimonial,
   ComposablePrimitives
 } from '@/sections';
+import { useEffect } from 'react';
 
-export default function Home() {
+export default function Home({ sponsors }) {
+  useEffect(() => {
+    console.log('useEffect', sponsors);
+  }, []);
+
   return (
     <>
       <Header />
@@ -27,11 +33,16 @@ export default function Home() {
         <Integrations />
         <div className="flex flex-col space-y-[65px]">
           <HelpUs />
-          <SponsorsCarousel />
+          <SponsorsCarousel sponsors={sponsors} />
           <CallToAction />
         </div>
         <Footer />
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const sponsors = await getOpenCollectiveSponsors();
+  return { props: { sponsors } };
 }
