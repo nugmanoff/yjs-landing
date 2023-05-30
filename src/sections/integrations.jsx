@@ -19,7 +19,7 @@ function IntegrationItem({ href, title, Icon = undefined, description }) {
     <a
       href={href}
       target="_blank"
-      className="group flex cursor-pointer flex-col rounded-md p-2 text-sm text-slate-600 transition-all hover:bg-slate-50 md:text-base"
+      className="group flex cursor-pointer flex-col rounded-md p-3 text-sm text-slate-600 transition-all hover:bg-slate-50 md:text-base"
     >
       <div className="flex flex-col items-start gap-x-1">
         {Icon && (
@@ -49,7 +49,7 @@ export default function Integrations() {
             doing what matters and leave the boring parts to the integrations.
           </p>
         </div>
-        <div className="mt-6 grid w-full grid-cols-1 gap-x-10 gap-y-3 sm:mt-12 sm:grid-cols-2 sm:gap-y-12 md:grid-cols-3 lg:grid-cols-4">
+        <div className="-mx-3 mt-6 grid w-full grid-cols-1 gap-x-10 gap-y-3 sm:mt-12 sm:grid-cols-2 sm:gap-y-12 md:grid-cols-3 lg:grid-cols-4">
           <IntegrationItem
             href="https://docs.yjs.dev/ecosystem/editor-bindings/tiptap2"
             title="TipTap"

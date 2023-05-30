@@ -10,28 +10,28 @@ export default function UsedIn() {
         </p>
         <div className="mt-7 grid grid-cols-2 gap-x-[100px] md:grid-cols-4">
           <Image
-            src="/evernote.png"
+            src="/logos/evernote.png"
             alt="Evernote logo"
             width="155"
             height="96"
             quality={100}
           />
           <Image
-            src="/jupyter.png"
+            src="/logos/jupyter.png"
             alt="Jupyter logo"
             width="77"
             height="96"
             quality={100}
           />
           <Image
-            src="/ably.png"
+            src="/logos/ably.png"
             alt="Ably logo"
             width="128"
             height="96"
             quality={100}
           />
           <Image
-            src="/saga.png"
+            src="/logos/saga.png"
             alt="Saga logo"
             width="95"
             height="96"

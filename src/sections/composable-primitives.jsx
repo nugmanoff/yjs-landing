@@ -19,7 +19,7 @@ export default function ComposablePrimitives() {
             eventually consistent.
           </p>
         </div>
-        <div className="mt-8 grid w-full justify-between gap-6 md:mt-12 md:grid-cols-4 md:gap-10">
+        <div className="-mx-3 mt-8 grid w-full justify-between gap-6 md:mt-12 md:grid-cols-4 md:gap-10">
           <ComposablePrimitiveItem
             title="Array"
             description="Use it as you would use normal array. Insert items, delete items, access them by index."
@@ -96,7 +96,7 @@ function ComposablePrimitiveItem({
 
   return (
     <div
-      className={`group flex cursor-pointer flex-col rounded-md p-2 ${
+      className={`group flex cursor-pointer flex-col rounded-md p-3 ${
         isSelected ? 'bg-slate-50 text-slate-600' : 'bg-white text-slate-400'
       } transition-all hover:bg-slate-50`}
       onClick={onClick}

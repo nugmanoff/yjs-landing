@@ -28,7 +28,7 @@ export default function Home({ sponsors }) {
         <UsedIn />
         <Performance />
         <Testimonial
-          logoSrc="/evernote.png"
+          logoSrc="/logos/evernote.png"
           avatarSrc="/bartosz.jpg"
           fullname="Bartosz Sypytkowski"
           position="Co-founder, CTO @ Evernote"

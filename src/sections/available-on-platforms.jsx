@@ -29,32 +29,32 @@ export default function AvailableOnManyPlatforms() {
       </div>
       <div className="platforms-grid-container mt-8 gap-8 md:mt-12 md:gap-14">
         <Platform
-          logoSrc={'/wasm.png'}
+          logoSrc={'/logos/wasm.png'}
           title="WASM"
           href="https://github.com/y-crdt/y-crdt/tree/main/ywasm"
         />
         <Platform
-          logoSrc={'/rust.png'}
+          logoSrc={'/logos/rust.png'}
           title="Rust"
           href="https://github.com/y-crdt/y-crdt/tree/main/yrs"
         />
         <Platform
-          logoSrc={'/python.png'}
+          logoSrc={'/logos/python.png'}
           title="Python"
           href="https://github.com/y-crdt/ypy"
         />
         <Platform
-          logoSrc={'/ruby.png'}
+          logoSrc={'/logos/ruby.png'}
           title="Ruby"
           href="https://github.com/y-crdt/yrb"
         />
         <Platform
-          logoSrc={'/swift.png'}
+          logoSrc={'/logos/swift.png'}
           title="Swift"
           href="https://github.com/y-crdt/yswift"
         />
         <Platform
-          logoSrc={'/js.png'}
+          logoSrc={'/logos/js.png'}
           title="JavaScript"
           href="https://github.com/yjs/yjs"
         />

@@ -16,7 +16,7 @@ export default function CallToAction() {
           className="collective-btn flex h-[48px] flex-row items-center gap-2.5 px-4 text-base font-semibold text-[#1F87FF] md:h-[52px] md:text-lg"
         >
           <Image
-            src="/open-collective.svg"
+            src="/logos/open-collective.svg"
             alt="Open Collective logo"
             width="28"
             height="28"
