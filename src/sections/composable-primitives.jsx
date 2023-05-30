@@ -10,16 +10,16 @@ export default function ComposablePrimitives() {
     <div className="relative">
       <SectionLayout>
         <div className="flex flex-col items-start text-start">
-          <h2 className="font-cal-sans text-5xl text-black">
+          <h2 className="font-cal-sans text-4xl text-black md:text-5xl">
             Composable primitives.
           </h2>
-          <p className="mt-3 max-w-2xl text-xl tracking-tighter text-slate-400">
+          <p className="mt-3 max-w-2xl text-base tracking-tighter text-slate-400 md:text-xl">
             Yjs provides primitive building blocks that feel and behave like an
             ordinary data structures. Except for being conflict-free and
             eventually consistent.
           </p>
         </div>
-        <div className="mt-12 flex w-full flex-row justify-between gap-x-10">
+        <div className="mt-8 flex w-full flex-col justify-between gap-6 md:mt-12 md:flex-row md:gap-10">
           <ComposablePrimitiveItem
             title="Array"
             description="Create your dream CRM with powerful, flexible templates for every use case."
@@ -64,13 +64,18 @@ function CodeSnippet({ content }) {
       theme={codeSnippetTheme}
       code={content}
       language="js"
+      className="w-full"
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre style={style}>
+        <pre style={style} className="text-sm md:text-base">
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line })}>
               {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
+                <span
+                  key={key}
+                  {...getTokenProps({ token })}
+                  className="whitespace-pre-wrap break-words"
+                />
               ))}
             </div>
           ))}
@@ -96,11 +101,11 @@ function ComposablePrimitiveItem({
       } transition-all hover:text-slate-600`}
       onClick={onClick}
     >
-      <div className="flex flex-row items-center gap-x-1">
+      <div className="flex flex-row items-center gap-x-1 text-sm md:text-base">
         <Icon
           className={`${
             isSelected ? 'fill-slate-600' : 'fill-slate-400'
-          } transition-all group-hover:fill-slate-600`}
+          } h-[17px] w-[17px] transition-all group-hover:fill-slate-600`}
         />
         <h3 className="font-semibold">{title}</h3>
       </div>

@@ -5,10 +5,10 @@ export default function UsedIn() {
   return (
     <SectionLayout>
       <div className="flex flex-col items-center gap-y-4">
-        <p className="text-xl text-slate-400">
+        <p className="text-center text-base text-slate-400 md:text-xl">
           Used in world's leading collaborative software
         </p>
-        <div className="mt-7 flex flex-row gap-x-[100px]">
+        <div className="mt-7 grid grid-cols-2 gap-x-[100px] md:grid-cols-4">
           <Image
             src="/evernote.png"
             alt="Evernote logo"
