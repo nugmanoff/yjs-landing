@@ -16,16 +16,15 @@ function Platform({ logoSrc, href, title }) {
 
 export default function AvailableOnManyPlatforms() {
   return (
-    // <div className="relative">
     <SectionLayout>
       <div className="flex flex-col items-start text-start">
         <h2 className="font-cal-sans text-4xl text-black md:text-5xl">
           Available on many platforms.
         </h2>
         <p className="mt-3 max-w-2xl text-base tracking-tighter text-slate-400 md:text-xl">
-          Yjs provides primitive building blocks that feel and behave like an
-          ordinary data structures. Except for being conflict-free and
-          eventually consistent.
+          Yjs is accessible across many platforms, programming languages thanks
+          to its vibrant ecosystem of language bindings. Leverage the power of
+          Yjs in your favorite language.
         </p>
       </div>
       <div className="platforms-grid-container mt-8 gap-8 md:mt-12 md:gap-14">
@@ -61,6 +60,5 @@ export default function AvailableOnManyPlatforms() {
         />
       </div>
     </SectionLayout>
-    // </div>
   );
 }

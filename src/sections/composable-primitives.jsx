@@ -19,31 +19,31 @@ export default function ComposablePrimitives() {
             eventually consistent.
           </p>
         </div>
-        <div className="mt-8 flex w-full flex-col justify-between gap-6 md:mt-12 md:flex-row md:gap-10">
+        <div className="mt-8 grid w-full justify-between gap-6 md:mt-12 md:grid-cols-4 md:gap-10">
           <ComposablePrimitiveItem
             title="Array"
-            description="Create your dream CRM with powerful, flexible templates for every use case."
+            description="Use it as you would use normal array. Insert items, delete items, access them by index."
             Icon={ArrayIcon}
             onClick={() => setSelected('Array')}
             selected={selected}
           />
           <ComposablePrimitiveItem
             title="Text"
-            description="Create your dream CRM with powerful, flexible templates for every use case."
+            description="Build powerful collaborative text experiences. Range formatting, embedding is supported out of the box."
             Icon={TextIcon}
             onClick={() => setSelected('Text')}
             selected={selected}
           />
           <ComposablePrimitiveItem
             title="Map"
-            description="Create your dream CRM with powerful, flexible templates for every use case."
+            description="Most powerful and versatile data structure now conflict-free, eventually-consistent and automatically synced."
             Icon={MapIcon}
             onClick={() => setSelected('Map')}
             selected={selected}
           />
           <ComposablePrimitiveItem
             title="XML"
-            description="Create your dream CRM with powerful, flexible templates for every use case."
+            description="Build your own tree structures. Any level of depth, nestedness and complexity is supported."
             Icon={XMLIcon}
             onClick={() => setSelected('XML')}
             selected={selected}
@@ -96,16 +96,16 @@ function ComposablePrimitiveItem({
 
   return (
     <div
-      className={`group flex cursor-pointer flex-col ${
-        isSelected ? 'text-slate-600' : 'text-slate-400'
-      } transition-all hover:text-slate-600`}
+      className={`group flex cursor-pointer flex-col rounded-md p-2 ${
+        isSelected ? 'bg-slate-50 text-slate-600' : 'bg-white text-slate-400'
+      } transition-all hover:bg-slate-50`}
       onClick={onClick}
     >
       <div className="flex flex-row items-center gap-x-1 text-sm md:text-base">
         <Icon
           className={`${
             isSelected ? 'fill-slate-600' : 'fill-slate-400'
-          } h-[17px] w-[17px] transition-all group-hover:fill-slate-600`}
+          } h-[17px] w-[17px] transition-all`}
         />
         <h3 className="font-semibold">{title}</h3>
       </div>

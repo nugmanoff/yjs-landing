@@ -10,7 +10,11 @@ export default function CallToAction() {
         maintain and <br /> advance our software.
       </p>
       <div className="flex flex-col gap-4 md:flex-row">
-        <button className="collective-btn flex h-[48px] flex-row items-center gap-2.5 px-4 text-base font-semibold text-[#1F87FF] md:h-[52px] md:text-lg">
+        <a
+          href="https://opencollective.com/y-collective"
+          target="_blank"
+          className="collective-btn flex h-[48px] flex-row items-center gap-2.5 px-4 text-base font-semibold text-[#1F87FF] md:h-[52px] md:text-lg"
+        >
           <Image
             src="/open-collective.svg"
             alt="Open Collective logo"
@@ -18,8 +22,8 @@ export default function CallToAction() {
             height="28"
           />
           Donate to our Collective
-        </button>
-        <button className="h-[48px] rounded-xl border-[3px] border-white px-7 text-base font-bold text-white md:h-[52px] md:text-lg">
+        </a>
+        <button className="h-[48px] rounded-xl border-[3px] border-white px-7 text-base font-bold text-white transition-all hover:bg-white/25 md:h-[52px] md:text-lg">
           {'Paid Support ->'}
         </button>
       </div>

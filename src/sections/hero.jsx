@@ -1,6 +1,12 @@
+import { CopyToClipboardIcon, TerminalPromptIcon } from '@/components/icons';
 import SectionLayout from './layout';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Hero() {
+  const router = useRouter();
+  const [isCopiedVisible, setIsCopiedVisible] = useState(false);
+
   return (
     <SectionLayout>
       <div className="flex flex-col items-center gap-y-3 md:gap-y-4">
@@ -13,11 +19,44 @@ export default function Hero() {
           Figma in no time.
         </h2>
         <div className="flex flex-row gap-x-4">
-          <button className="h-[48px] w-[186px] rounded-xl bg-black text-base font-semibold text-white md:h-[52px]">
+          <a
+            href="https://docs.yjs.dev/"
+            target="_blank"
+            className="flex h-[48px] w-[186px] items-center justify-center rounded-xl bg-black  text-base font-semibold text-white transition-all hover:bg-slate-800 md:h-[52px]"
+          >
             Get started
-          </button>
-          <button className="card hidden h-[52px] w-[186px] rounded-xl bg-white font-medium text-black md:block">
-            npm install yjs
+          </a>
+          <button
+            className="card group hidden items-center rounded-xl hover:bg-slate-50 md:flex"
+            onClick={() => {
+              navigator.clipboard.writeText('npm install yjs');
+              setIsCopiedVisible(true);
+              setTimeout(() => {
+                setIsCopiedVisible(false);
+              }, 1750);
+            }}
+          >
+            <TerminalPromptIcon />
+            <code className="code flex-1 text-left leading-none">
+              npm install yjs
+            </code>
+
+            <div className="relative">
+              <div
+                className="block p-4 transition active:scale-100 active:transition-none group-hover:rotate-12"
+                title="Copy to clipboard"
+              >
+                <CopyToClipboardIcon />
+              </div>
+
+              <p
+                className={`absolute left-1/2 top-[calc(100%+8px)] -translate-x-[calc(50%+6px)] whitespace-nowrap rounded-md bg-black p-2 text-sm leading-none text-white transition-all ${
+                  isCopiedVisible ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                Copied!
+              </p>
+            </div>
           </button>
         </div>
         <p className="text-sm text-slate-400">Free Forever • MIT License</p>
