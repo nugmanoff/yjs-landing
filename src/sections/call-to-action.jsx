@@ -23,9 +23,9 @@ export default function CallToAction() {
           />
           Donate to our Collective
         </a>
-        <button className="h-[48px] rounded-xl border-[3px] border-white px-7 text-base font-bold text-white transition-all hover:bg-white/25 md:h-[52px] md:text-lg">
+        {/* <button className="h-[48px] rounded-xl border-[3px] border-white px-7 text-base font-bold text-white transition-all hover:bg-white/25 md:h-[52px] md:text-lg">
           {'Paid Support ->'}
-        </button>
+        </button> */}
       </div>
     </div>
   );

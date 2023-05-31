@@ -15,8 +15,8 @@ function SponsorCard({ sponsor: { imageUrl, name, amount, date } }) {
           quality={100}
           className="object-fit mb-1 rounded-md"
           placeholder="blur"
-          blurDataURL="/sponsor-placeholder.png"
-          onError={() => setSrc('/sponsor-placeholder.png')}
+          blurDataURL="/logos/sponsor-placeholder.png"
+          onError={() => setSrc('/logos/sponsor-placeholder.png')}
         />
       </div>
       <p className="text-xl font-semibold md:text-2xl">{name}</p>

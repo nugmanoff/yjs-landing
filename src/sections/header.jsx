@@ -1,4 +1,4 @@
-import { YjsLogo } from '@/components/icons';
+import { GitHubLogo, StarIcon, YjsLogo } from '@/components/icons';
 import Link from 'next/link';
 
 function NavItem({ href, title }) {
@@ -13,6 +13,20 @@ function NavItem({ href, title }) {
   );
 }
 
+function GitHubStars() {
+  return (
+    <a
+      href="https://github.com/yjs/yjs"
+      target="_blank"
+      className="card flex flex-row items-center gap-x-1 rounded-full px-3 md:ml-2"
+    >
+      <StarIcon className="stroke-none" />
+      <p className="text-sm font-semibold leading-none text-slate-600">11.8K</p>
+      <GitHubLogo className="stroke-none" />
+    </a>
+  );
+}
+
 export default function Header() {
   return (
     <header className="container py-6">
@@ -22,12 +36,13 @@ export default function Header() {
         </Link>
         <div className="flex flex-row">
           <NavItem href="https://docs.yjs.dev/" title="Docs" />
-          <NavItem href="" title="Pricing" />
+          {/* <NavItem href="" title="Pricing" /> */}
           <NavItem href="https://discuss.yjs.dev/" title="Forum" />
           <NavItem
             href="https://discord.com/invite/T3nqMT6qbM"
             title="Discord"
           />
+          <GitHubStars />
         </div>
       </div>
     </header>
