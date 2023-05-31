@@ -13,15 +13,31 @@ import {
   Testimonial,
   ComposablePrimitives
 } from '@/sections';
-import { useEffect } from 'react';
+import Head from 'next/head';
 
 export default function Home({ sponsors }) {
-  useEffect(() => {
-    console.log('useEffect', sponsors);
-  }, []);
+  const meta = {
+    title: 'Yjs Home page',
+    description: `Build local-first collaborative software.`,
+    type: 'website'
+  };
 
   return (
     <>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta property="og:url" content={`https://yjs.dev`} />
+        <link rel="canonical" href={`https://yjs.dev`} />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="Yjs.dev" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+      </Head>
       <Header />
       <div className="mt-[130px] flex flex-col space-y-[125px] md:space-y-[150px]">
         <Hero />
