@@ -13,13 +13,6 @@
     font-family: 'cal-sans', sans-serif;
   }
 
-  .platforms-grid-container {
-    display: grid;
-    grid-template-columns: repeat();
-    grid-template-columns: repeat(auto-fill, 144px);
-    grid-auto-rows: 144px;
-  }
-
   :root {
     --page-width: 1200px;
     --page-padding: 64px;
@@ -53,6 +46,23 @@
     max-width: var(--page-width-plus-padding);
     padding-left: calc(var(--page-padding) / 2);
     padding-right: calc(var(--page-padding) / 2);
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-cal-sans text-4xl text-black md:text-5xl;
+  }
+
+  .section-description {
+    @apply mt-3 max-w-2xl text-base tracking-tighter text-slate-400 md:text-xl;
+  }
+
+  .platforms-grid-container {
+    display: grid;
+    grid-template-columns: repeat();
+    grid-template-columns: repeat(auto-fill, 144px);
+    grid-auto-rows: 144px;
   }
 
   .card {

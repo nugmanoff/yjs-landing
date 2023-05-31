@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SectionLayout from './layout';
+import SectionLayout from '../components/section-layout';
 
 export default function Testimonial({
   logoSrc,
@@ -26,7 +26,7 @@ export default function Testimonial({
             {text}
           </p>
           <div className=" flex flex-row items-center">
-            <div className="relative mr-4 h-[48px] w-[48px] md:h-[64px] md:w-[64px]">
+            <div className="relative mr-4 h-12 w-12 md:h-16 md:w-16">
               <Image
                 src={avatarSrc}
                 alt={`${fullname}'s Profile Picture`}

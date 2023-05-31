@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SectionLayout from './layout';
+import SectionLayout from '../components/section-layout';
 
 export default function UsedIn() {
   return (

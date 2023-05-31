@@ -13,6 +13,15 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
+      },
+      colors: {
+        collectiveBlue: '#1F87FF'
+      },
+      borderRadius: {
+        '3xl': '20px'
+      },
+      spacing: {
+        '13': '3.25rem'
       }
     }
   },

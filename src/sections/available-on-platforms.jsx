@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SectionLayout from './layout';
+import SectionLayout from '../components/section-layout';
 
 function Platform({ logoSrc, href, title }) {
   return (
@@ -18,10 +18,8 @@ export default function AvailableOnManyPlatforms() {
   return (
     <SectionLayout>
       <div className="flex flex-col items-start text-start">
-        <h2 className="font-cal-sans text-4xl text-black md:text-5xl">
-          Available on many platforms.
-        </h2>
-        <p className="mt-3 max-w-2xl text-base tracking-tighter text-slate-400 md:text-xl">
+        <h2 className="section-title">Available on many platforms.</h2>
+        <p className="section-description">
           Yjs is accessible across many platforms, programming languages thanks
           to its vibrant ecosystem of language bindings. Leverage the power of
           Yjs in your favorite language.

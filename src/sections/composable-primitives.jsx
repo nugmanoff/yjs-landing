@@ -1,5 +1,5 @@
 import { Highlight, themes } from 'prism-react-renderer';
-import SectionLayout from './layout';
+import SectionLayout from '../components/section-layout';
 import { ArrayIcon, MapIcon, TextIcon, XMLIcon } from '@/components/icons';
 import { useState } from 'react';
 
@@ -10,10 +10,10 @@ export default function ComposablePrimitives() {
     <div className="relative">
       <SectionLayout>
         <div className="flex flex-col items-start text-start">
-          <h2 className="font-cal-sans text-4xl text-black md:text-5xl">
+          <h2 className="section-title">
             Composable primitives.
           </h2>
-          <p className="mt-3 max-w-2xl text-base tracking-tighter text-slate-400 md:text-xl">
+          <p className="section-description">
             Yjs provides primitive building blocks that feel and behave like an
             ordinary data structures. Except for being conflict-free and
             eventually consistent.
@@ -49,7 +49,7 @@ export default function ComposablePrimitives() {
             selected={selected}
           />
         </div>
-        <div className="card mt-10 h-auto w-full rounded-[20px] bg-slate-50 p-4 transition-all">
+        <div className="card mt-10 h-auto w-full rounded-3xl bg-slate-50 p-4 transition-all">
           <CodeSnippet content={codeSnippets[selected]} />
         </div>
       </SectionLayout>

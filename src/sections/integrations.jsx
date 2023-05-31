@@ -12,7 +12,7 @@ import {
   WebsocketLogo,
   LevelDBLogo
 } from '@/components/icons';
-import SectionLayout from './layout';
+import SectionLayout from '../components/section-layout';
 
 function IntegrationItem({ href, title, Icon = undefined, description }) {
   return (
@@ -24,7 +24,7 @@ function IntegrationItem({ href, title, Icon = undefined, description }) {
       <div className="flex flex-col items-start gap-x-1">
         {Icon && (
           <Icon
-            className={`h-[32px] w-[32px] fill-slate-600 transition-all group-hover:fill-slate-600`}
+            className={`h-8 w-8 fill-slate-600 transition-all group-hover:fill-slate-600`}
           />
         )}
         <h3 className="font-semibold">{title}</h3>
@@ -39,10 +39,8 @@ export default function Integrations() {
     <div className="relative">
       <SectionLayout>
         <div className="flex flex-col items-start text-start">
-          <h2 className="font-cal-sans text-4xl text-black md:text-5xl">
-            Integrations.
-          </h2>
-          <p className="texte-base mt-3 max-w-2xl tracking-tighter text-slate-400 md:text-xl">
+          <h2 className="section-title">Integrations.</h2>
+          <p className="section-description">
             Building collaborative applications takes more than having shared
             types. Thanks to vibrant ecosystem of various text editor
             integrations, connection and database providers – you can focus on

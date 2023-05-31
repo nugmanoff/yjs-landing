@@ -56,7 +56,7 @@ export default function Home({ sponsors }) {
         <ComposablePrimitives />
         <AvailableOnManyPlatforms />
         <Integrations />
-        <div className="flex flex-col space-y-[35px] md:space-y-[65px]">
+        <div className="flex flex-col space-y-9 md:space-y-16">
           <HelpUs />
           <SponsorsCarousel sponsors={sponsors} />
           <CallToAction />

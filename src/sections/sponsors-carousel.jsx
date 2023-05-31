@@ -6,7 +6,7 @@ function SponsorCard({ sponsor: { imageUrl, name, amount, date } }) {
 
   return (
     <div className="card slide flex flex-shrink-0 flex-col gap-y-1.5 rounded-lg p-4 md:p-6">
-      <div className="relative h-[48px] w-[48px] md:h-[64px] md:w-[64px]">
+      <div className="relative h-12 w-12 md:h-16 md:w-16">
         <Image
           src={src}
           alt={`${name} Logo`}

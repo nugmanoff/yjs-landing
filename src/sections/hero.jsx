@@ -1,5 +1,5 @@
 import { CopyToClipboardIcon, TerminalPromptIcon } from '@/components/icons';
-import SectionLayout from './layout';
+import SectionLayout from '../components/section-layout';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -22,7 +22,7 @@ export default function Hero() {
           <a
             href="https://docs.yjs.dev/"
             target="_blank"
-            className="flex h-[48px] w-[186px] items-center justify-center rounded-xl bg-black  text-base font-semibold text-white transition-all hover:bg-slate-800 md:h-[52px]"
+            className="flex h-12 w-[186px] items-center justify-center rounded-xl bg-black  text-base font-semibold text-white transition-all hover:bg-slate-800 md:h-13"
           >
             Get started
           </a>
