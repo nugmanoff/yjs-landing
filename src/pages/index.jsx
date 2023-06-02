@@ -14,6 +14,8 @@ import {
   ComposablePrimitives
 } from '@/sections';
 import AlsoSponsoredBy from '@/sections/also-sponsored-by';
+import MeetTheTeam from '@/sections/meet-the-team';
+import Team from '@/sections/team';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -58,8 +60,10 @@ export default function Home({ sponsors }) {
         <ComposablePrimitives />
         <AvailableOnManyPlatforms />
         <Integrations />
+        {/* <MeetTheTeam /> */}
         <div className="flex flex-col space-y-9 md:space-y-16">
           <HelpUs />
+          <Team />
           <SponsorsCarousel sponsors={sponsors} />
           <AlsoSponsoredBy />
           <CallToAction />

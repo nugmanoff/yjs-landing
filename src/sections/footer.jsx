@@ -80,7 +80,7 @@ export default function Footer() {
                   <a href="/docs/installation">Kevin's blog</a>
                 </li>
                 <li>
-                  <a href="/docs/installation">Bartos'z blog</a>
+                  <a href="/docs/installation">Bartosz's blog</a>
                 </li>
               </FooterSection>
             </div>

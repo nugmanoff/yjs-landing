@@ -8,7 +8,6 @@ export default function UsedBy() {
         <p className="text-center text-base text-slate-400 md:text-xl">
           Used by world's leading teams and companies:
         </p>
-        {/* <div className="justify-content grid-cols-2 mt-8  grid items-center gap-x-28 gap-y-16 sm:grid-cols-3 md:flex-row lg:grid-cols-4 xl:grid-cols-6"> */}
         <div className="justify-content mt-8 grid grid-cols-2 items-center gap-x-28 gap-y-16 sm:grid-cols-3 xl:flex xl:flex-row ">
           <Image
             alt="Automattic's logo"
