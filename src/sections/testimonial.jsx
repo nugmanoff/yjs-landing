@@ -18,7 +18,6 @@ export default function Testimonial({
             width="155"
             height="96"
             quality={100}
-            className="-mt-[28px]"
           />
         </div>
         <div className="flex flex-col md:col-span-4">

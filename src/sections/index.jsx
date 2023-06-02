@@ -9,7 +9,7 @@ import Integrations from '@/sections/integrations';
 import Performance from '@/sections/performance';
 import SponsorsCarousel from '@/sections/sponsors-carousel';
 import Testimonial from '@/sections/testimonial';
-import UsedIn from '@/sections/used-in';
+import UsedBy from '@/sections/used-by';
 
 export {
   AvailableOnManyPlatforms,
@@ -23,5 +23,5 @@ export {
   Performance,
   SponsorsCarousel,
   Testimonial,
-  UsedIn
+  UsedBy
 };

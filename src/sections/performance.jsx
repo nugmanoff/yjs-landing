@@ -31,8 +31,9 @@ export default function Performance() {
                 <div className="group flex w-full flex-col justify-center gap-x-3 gap-y-1 md:flex-row">
                   <dt className="whitespace-nowrap md:basis-52 md:justify-end"></dt>
                   <p className="mt-8 w-full text-sm text-slate-400 md:text-base">
-                    Average number of downloads per week based on data
-                    from&nbsp;
+                    Average number of{' '}
+                    <span className="text-black">downloads per week</span> based
+                    on data from&nbsp;
                     <a
                       href="https://npmtrends.com/automerge-vs-automerge-classic-vs-json-joy-vs-sharedb-vs-yjs"
                       target="_blank"

@@ -1,6 +1,6 @@
 import getOpenCollectiveSponsors from '@/data/get-opencollective-sponsors';
 import {
-  UsedIn,
+  UsedBy,
   AvailableOnManyPlatforms,
   CallToAction,
   Footer,
@@ -43,10 +43,10 @@ export default function Home({ sponsors }) {
       <Header />
       <div className="mt-[130px] flex flex-col space-y-[125px] md:space-y-[150px]">
         <Hero />
-        <UsedIn />
+        <UsedBy />
         <Performance />
         <Testimonial
-          logoSrc="/logos/evernote.png"
+          logoSrc="/logos/evernote.svg"
           avatarSrc="/bartosz.jpg"
           fullname="Bartosz Sypytkowski"
           position="Co-founder, CTO @ Evernote"
