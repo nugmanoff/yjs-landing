@@ -22,8 +22,7 @@ function SponsorCard({ sponsor: { imageUrl, name, amount, date } }) {
       <p className="text-xl font-semibold md:text-2xl">{name}</p>
       <p className="text-xl font-medium md:text-2xl">${amount}</p>
       <p className="text-sm font-normal text-slate-400 md:text-base">
-        amount contributed <br /> since{' '}
-        <span className="font-medium">{date}</span>
+        amount contributed <br /> on <span className="font-medium">{date}</span>
       </p>
     </div>
   );

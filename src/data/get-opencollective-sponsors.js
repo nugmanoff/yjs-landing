@@ -1,11 +1,12 @@
 export default async function getOpenCollectiveSponsors() {
+  // Last 30 transactions
   const data = JSON.stringify({
     query: `query account($slug: String) {
       account(slug: $slug) {
         transactions(
           kind: CONTRIBUTION
-          limit: 500
-          orderBy: { direction: ASC }
+          limit: 30
+          orderBy: { direction: DESC }
           includeChildrenTransactions: true
         ) {
           totalCount
@@ -41,43 +42,19 @@ export default async function getOpenCollectiveSponsors() {
   });
   const json = await response.json();
 
-  return mapped(json.data.account.transactions.nodes);
-}
+  const transactions = json.data.account.transactions.nodes;
 
-function mapped(transactions) {
-  const mapped = transactions.reduce((result, current) => {
-    const id = current.fromAccount.id;
+  return transactions.map((current) => {
     const amount = current.amount.value;
-    const name = current.fromAccount.name;
-    const date = current.updatedAt;
+    const name = current.fromAccount.name || 'Anonymous';
+    const date = new Date(current.updatedAt).toLocaleString('en-us', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
     const imageUrl = current.fromAccount.imageUrl;
 
-    if (!result.hasOwnProperty(id)) {
-      result[id] = {
-        amount: amount,
-        name: name,
-        date: new Date(date).toLocaleString('en-us', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        }),
-        imageUrl: imageUrl
-      };
-    } else {
-      result[id].amount += amount;
-    }
-    return result;
-  }, {});
-
-  let result = [];
-
-  for (let key in mapped) {
-    if (mapped.hasOwnProperty(key)) {
-      result.push(mapped[key]);
-    }
-  }
-
-  result.sort((a, b) => b.amount - a.amount);
-
-  return result;
+    return { amount, name, date, imageUrl };
+  });
 }

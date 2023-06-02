@@ -13,7 +13,9 @@ import {
   Testimonial,
   ComposablePrimitives
 } from '@/sections';
+import AlsoSponsoredBy from '@/sections/also-sponsored-by';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home({ sponsors }) {
   const meta = {
@@ -59,6 +61,7 @@ export default function Home({ sponsors }) {
         <div className="flex flex-col space-y-9 md:space-y-16">
           <HelpUs />
           <SponsorsCarousel sponsors={sponsors} />
+          <AlsoSponsoredBy />
           <CallToAction />
         </div>
         <Footer />

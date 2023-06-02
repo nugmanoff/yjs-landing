@@ -100,12 +100,17 @@
     background-clip: text;
   }
 
+  :root {
+    --number-of-slides: 30;
+    --carousel-animation-duration: 90s;
+  }
+
   @-webkit-keyframes scroll {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 7));
+      transform: translateX(calc(-250px * var(--number-of-slides)));
     }
   }
 
@@ -114,7 +119,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 7));
+      transform: translateX(calc(-250px * var(--number-of-slides)));
     }
   }
 
@@ -153,13 +158,13 @@
   }
 
   .slider .slide-track {
-    -webkit-animation: scroll 55s linear infinite;
-    animation: scroll 55s linear infinite;
+    -webkit-animation: scroll var(--carousel-animation-duration) linear infinite;
+    animation: scroll var(--carousel-animation-duration) linear infinite;
     display: flex;
     gap: 56px;
     padding-top: 2px;
     padding-bottom: 2px;
-    width: calc(250px * 14);
+    width: calc(250px * var(--number-of-slides) * 2);
   }
 
   .slider .slide {
@@ -174,7 +179,7 @@
     }
 
     .slider .slide-track {
-      width: calc(200px * 14);
+      width: calc(200px * var(--number-of-slides) * 2);
       gap: 28px;
     }
 

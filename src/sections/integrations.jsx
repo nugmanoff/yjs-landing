@@ -1,6 +1,6 @@
 import {
   CodeMirrorLogo,
-  DatLogo,
+  LexicalLogo,
   MilkdownLogo,
   MonacoLogo,
   ProseMirrorLogo,
@@ -103,10 +103,10 @@ export default function Integrations() {
             description="Integration follows conventional client-server model. Clients connect to a single endpoint over Websocket. The server distributes document updates and awareness information among clients."
           />
           <IntegrationItem
-            href="https://github.com/yjs/y-dat"
-            title="Dat"
-            Icon={DatLogo}
-            description="Propagates document updates using Dat protocol. Uses hypercore data channels to exchange document updates and awareness information. "
+            href="https://www.npmjs.com/package/@lexical/yjs"
+            title="Lexical"
+            Icon={LexicalLogo}
+            description="Lexical is an extensible JavaScript web text-editor framework by Meta. It has an emphasis on reliability, accessibility, and performance."
           />
           <IntegrationItem
             href="https://docs.yjs.dev/ecosystem/database-provider/y-indexeddb"

@@ -21,7 +21,7 @@ function GitHubStars() {
       className="card flex flex-row items-center gap-x-1 rounded-full px-3 md:ml-2"
     >
       <StarIcon className="stroke-none" />
-      <p className="text-sm font-semibold leading-none text-slate-600">11.8K</p>
+      <p className="text-sm font-semibold leading-none text-slate-600">12K</p>
       <GitHubLogo className="stroke-none" />
     </a>
   );
